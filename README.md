@@ -45,7 +45,7 @@ make start
 ```
 
 Then, open browser on `http://localhost:8080`. 
-The file `index.html` will consume library from `dist/mylibrary.js` (and corresponding `.wasm`).
+The file `index.html` (see [online](https://igormcoelho.github.io/emscripten-webpack-cpp-example/packages/example-webpack4-js/)) will consume library from `dist/mylibrary.js` (and corresponding `.wasm`).
 
 ### How does it work
 
