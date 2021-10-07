@@ -1,5 +1,5 @@
 # emscripten-webpack-cpp-example
-Complete example of  Emscripten + Webpack + C++ for Browser and Node
+Complete example of C++ to JS library with Emscripten + Webpack for Browser and Node
 
 There are many technical challenges, that's why I try to present this as simple as possible,
 but also covering complete aspects of this translation of C++ to JS.
