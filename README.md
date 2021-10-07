@@ -49,7 +49,7 @@ The file `index.html` will consume library from `dist/mylibrary.js` (and corresp
 
 ### How does it work
 
-This will compile file `src/mylibrary.cpp` and generate outputs on `build/` and `dist/`.
+This will compile file `src/mylibrary.cpp` using docker image `emscripten/emsdk` and generate outputs on `build/` and `dist/`.
 The `build/` are intermediate files from emscripten, that are useful for usage in Node.
 The `dist/` are post-processed files (after `build/`), that re useful for browser (in UMD format).
 
