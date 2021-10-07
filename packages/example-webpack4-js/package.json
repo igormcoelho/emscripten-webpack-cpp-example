@@ -1,5 +1,5 @@
 {
-    "name": "lol",
+    "name": "example",
     "scripts": {
         "build:codec": "rm -f dist/* && docker run --rm -v $(pwd)/../../:/src emscripten/emsdk  em++ --bind --std=c++17 -O3 -s WASM=1 -Isrc/ --pre-js ./packages/example-webpack4-js/prefix-node-require.js --js-library ./src/mylibrary_web_exports.js -s ASSERTIONS=1  -s EXPORTED_RUNTIME_METHODS='[\"cwrap\", \"ccall\", \"UTF8ToString\", \"stringToUTF8\", \"intArrayFromString\", \"ALLOC_NORMAL\", \"allocate\", \"AsciiToString\"]' -s ALLOW_MEMORY_GROWTH=1 -s MODULARIZE=1 -s 'EXPORT_NAME=\"mylibrary_raw_lib\"'  -o ./packages/example-webpack4-js/build/mylibrary_raw_lib.js  ./src/mylibrary.cpp",
         "build:bundle": "webpack",

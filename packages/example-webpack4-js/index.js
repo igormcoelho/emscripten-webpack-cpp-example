@@ -1,11 +1,11 @@
 // MIT License - NeoResearch Community
 // Copyleft 2021
 
-import csbiginteger from './build/mylibrary_raw_lib.js';
+import mylibrary from './build/mylibrary_raw_lib.js';
 import wasm from './build/mylibrary_raw_lib.wasm';
  
-// this module is named 'csBigInteger'
-// wasm module is the exported object: 'csBigInteger.wasmModule'
+// this module is named 'MyLibrary'
+// wasm module is the exported object: 'MyLibrary.wasmModule'
 export var wasmModule = null; 
 
 // ========================= HELPER WASM FUNCTIONS
@@ -86,9 +86,9 @@ export function asciiToBytes(ascii) {
 
 // ========================= WASM MODULE LOADER
 
-// exported loader function is named 'csbiginteger'
-// exported module is named 'csBigInteger'
-export const module = csbiginteger({
+// exported loader function is named 'mylibrary'
+// exported module is named 'MyLibrary'
+export const module = mylibrary({
   // locateFile will find corresponding .wasm and match it here
   locateFile(path) {
     if(path.endsWith('.wasm')) {
@@ -100,7 +100,7 @@ export const module = csbiginteger({
     //console.log("loading wasmModule: "+JSON.stringify(instance));
     wasmModule = instance;
     //
-    console.log("loaded csBigInteger.wasmModule = "+wasmModule);
+    console.log("loaded MyLibrary.wasmModule = "+wasmModule);
 
     // some operations may be necessary to load wasm module
     var hi = "hello world";
