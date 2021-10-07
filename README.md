@@ -44,11 +44,14 @@ cd packages/example-webpack4-js
 make start
 ```
 
-Then, open browser on `http://localhost:8080`.
+Then, open browser on `http://localhost:8080`. 
+The file `index.html` will consume library from `dist/mylibrary.js` (and corresponding `.wasm`).
 
 ### How does it work
 
 This will compile file `src/mylibrary.cpp` and generate outputs on `build/` and `dist/`.
+The `build/` are intermediate files from emscripten, that are useful for usage in Node.
+The `dist/` are post-processed files (after `build/`), that re useful for browser (in UMD format).
 
 See [README.md](./packages/example-webpack4-js) inside folder `packages/example-webpack4-js` for
 detailed information.
