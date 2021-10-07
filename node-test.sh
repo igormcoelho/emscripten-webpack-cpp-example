@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "installing dependencies"
+(cd packages/example-webpack4-js && npm install)
+
+
 echo "test with nodejs .js"
 (cd packages/example-webpack4-js/node_tests && node test.js)
 
