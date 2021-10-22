@@ -12,7 +12,7 @@ test('test_mylibrary_add', async () => {
 }); // test
 
 async function test_mylibrary_add() {
-  await delay(100);
+  await delay(300);
   const output1 = await page.evaluate(
     () => MyLibrary.wasmModule._mylibrary_add(10, 20)
   );

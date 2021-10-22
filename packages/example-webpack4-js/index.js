@@ -88,7 +88,7 @@ export function asciiToBytes(ascii) {
 
 // exported loader function is named 'mylibrary'
 // exported module is named 'MyLibrary'
-export const module = mylibrary({
+export const myModule = mylibrary({
   // locateFile will find corresponding .wasm and match it here
   locateFile(path) {
     if(path.endsWith('.wasm')) {
